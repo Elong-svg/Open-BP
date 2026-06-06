@@ -1,4 +1,4 @@
-# 🏭 BP-Factory
+# 🏢 Open BP
 
 > **AI-Powered Business Plan Foundry — 为腾讯 WorkBuddy 量身锻造的智能 BP 流水线。**
 >
@@ -11,11 +11,11 @@
 
 ---
 
-## 💡 为什么叫 BP-Factory？
+## 💡 为什么叫 Open BP？
 
-**BP** = Business Plan，商业计划书。**Factory** = 工厂、流水线。
+**Open** = 开源、开放、自由。**BP** = Business Plan，商业计划书。
 
-就像现代化工厂将原材料加工为成品，BP-Factory 通过 **6 人专家团队并行协作 + 3 级代码强制检查点 + 13 个技能无缝编排**，将原始想法和数据"生产"为经得起投资人审视的专业商业计划书。
+就像现代化工厂将原材料加工为成品，Open BP 通过 **6 人专家团队并行协作 + 3 级代码强制检查点 + 13 个技能无缝编排**，将原始想法和数据"生产"为经得起投资人审视的专业商业计划书。
 
 不是模板填充，不是 AI 随机输出 —— 是 **标准化的智能生产线**。
 
@@ -27,7 +27,7 @@
 
 ```
 ❌ 传统方案：SKILL.md 里写"请确保字数达标" → AI 可能忽略
-✅ BP-Factory：master_check.py 代码强制校验 → 不达标就拒绝输出
+✅ Open BP：master_check.py 代码强制校验 → 不达标就拒绝输出
 ```
 
 **约束流程，不约束内容。** Harness 管"怎么做"的合规性，AI 自主决定"写什么"。
@@ -59,8 +59,8 @@
 
 | 技能 | 版本 | 能力 |
 |------|------|------|
-| **[business-plan-creator](skills/business-plan-creator/SKILL.md)** | `v5.0.1` | 主引擎：6 人团队调度 + Harness 约束引擎 + skill_trace 追踪 |
-| **[markdown-to-word](skills/markdown-to-word/SKILL.md)** | `v2.0.0` | 文档转换器：4 套企业级模板（深蓝标题 / 三线表 / 条纹行）|
+| **[Open BP](skills/business-plan-creator/SKILL.md)** | `v5.0.1` | 主引擎：6 人团队调度 + Harness 约束引擎 + skill_trace 追踪 |
+| **[markdown-to-word](skills/markdown-to-word/SKILL.md)** | `v3.1.0` | 文档转换器：完整图片/链接/代码块支持 + 4套企业级模板 + 表格文字居中
 | **[markdown-processor](skills/markdown-processor/SKILL.md)** | `v1.0.0` | 文档处理引擎：多文件合并、标题修复、格式统一 |
 
 ### 🔧 第二层：支撑组件（7 个）
@@ -77,7 +77,7 @@
 
 ### 🚀 第三层：领域整合包（3 个）🆕
 
-| 整合包 | 内容 | 与 BP-Factory 的关系 |
+| 整合包 | 内容 | 与 Open BP 的关系 |
 |--------|------|-------------------|
 | **[scientist](skills/scientist/SKILL.md)** | 7 合 1 科研全流程：头脑风暴→文献→EDA→可视化→论文→PPT→示意图 | 提供 data-visualization（期刊级图表生成）能力 |
 | **[NeoData金融搜索服务](skills/NeoData金融搜索服务/SKILL.md)** | 自然语言金融数据搜索：A股/港股/美股/基金/宏观/外汇 7 大类 | 提供 finance-data-retrieval（实时金融数据获取）能力 |
@@ -90,7 +90,7 @@
 ## 🏗️ 架构：智能锻造流水线
 
 ```
-                        BP-Factory Pipeline
+                        Open BP Pipeline
 ┌─────────────────────────────────────────────────────────────────┐
 │                                                                 │
 │  Raw Data    ┌──────────┐   ┌──────────┐   ┌──────────┐   📄   │
@@ -122,11 +122,15 @@
 | **academic** | 学术论文、研究报告 | 双倍行距 + 首行缩进 |
 | **default** | 通用文档 | 简洁通用 |
 
-### v2.0.0 关键修复
+| ### 3.1.0 v2.0.0 关键修复
 
-- 🔥 修复颜色 Fallback Bug：从全局黑色 → 专业蓝色背景表头
-- 🔥 字号层次优化：H1/H2/H3 从几乎一样 → 22pt/16pt/13pt 清晰三层
-- 🔥 表格样式全面升级：三线表 + 蓝色表头（#2B579A）+ 浅蓝灰条纹行（#E8EEF4）
+- 🔥 **完整图片支持**：本地/网络/路径智能解析，解决 v2.x 图片缺失核心 bug
+- 🔥 **完整链接支持**：蓝色下划线超链接，可点击
+- 🔥 **完整代码块支持**：浅灰背景 + 等宽字体
+- 🔥 **嵌套列表 + 任务列表**：任意层级
+- 🔥 **代码精简**：964行 → 658行，减少 32%
+- 🔥 **表格文字居中**：数据行与表头全部居中
+- 🔥 **消除警告**：修复所有 DeprecationWarning
 
 ---
 
@@ -176,7 +180,7 @@ python scripts/query.py "腾讯最新财报营收"
 ## 📁 项目结构
 
 ```
-BP-Factory/
+Open-BP/
 ├── skills/
 │   ├── business-plan-creator/      # 🏗️ 商业计划书主引擎 (v5.0.1)
 │   │   ├── SKILL.md
@@ -190,7 +194,7 @@ BP-Factory/
 │   │   │   └── bp_orchestrator.py  # 流程编排器
 │   │   └── references/             # 专家职责 + 质量清单
 │   │
-│   ├── markdown-to-word/           # 📄 Markdown → Word (v2.0.0)
+│   ├── markdown-to-word/           # 📄 Markdown → Word (v3.1.0)
 │   │   ├── scripts/markdown_to_word_pro.py
 │   │   └── assets/styles/          # 4 套设计模板 XML
 │   │
@@ -253,4 +257,4 @@ BP-Factory/
 
 > *"约束写在纸上没有代码强制执行 = 没有约束。约束写在代码里，才是真正的执行力。"*
 >
-> *— BP-Factory Harness Engine, v5.0.1*
+> *— Open BP Harness Engine, v5.0.1*

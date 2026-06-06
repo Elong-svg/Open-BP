@@ -1,6 +1,6 @@
 ---
 name: markdown-to-word
-description: Markdown 转 Word 一键转换技能 - 应用 minimax-docx 企业级设计系统，支持标题、段落、表格、列表等所有元素的样式自动优化
+description: Markdown 转 Word 一键转换技能 v3.1.0 - 代码精简优化版（658行），表格文字居中，完整支持图片/链接/代码块/嵌套列表/任务列表/引用/删除线等所有 Markdown 元素
 triggers:
   - markdown 转 word
   - md 转 docx
@@ -10,10 +10,10 @@ triggers:
   - 文档美化
   - markdown-to-word
   - md2docx
-version: 1.2.0
+version: 3.1.0
 author: Claw
-update_date: 2026-04-03
-changelog: 修复表格转换问题（Markdown 表格预处理 + 样式应用）
+update_date: 2026-06-06
+changelog: v3.1.0 代码精简（964→658行，减少32%），表格数据行文字居中，修复所有 DeprecationWarning，完整图片/链接/代码块支持
 disable: false
 ---
 
